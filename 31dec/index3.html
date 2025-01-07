@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function convert(){
+            var a = parseInt(document.getElementById("t").value);
+            var operation = document.getElementById("operation").value;
+            var result;
+
+            if (isNaN(a)) {
+                alert("Please enter valid temperature values");
+                return;
+            }
+
+            switch (operation) {
+                case "CtoF":
+                    result = (a*1.8) + 32;
+                    break;
+                case "FtoC":
+                    result = (a-32)*5/9;
+                    break;
+            }
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Java Script </h1>
+
+    <div>
+        <h2>Calculator</h2>
+        <h3>Enter First Number:</h3>
+        <input type="number" placeholder="Enter temperature..." name="t" id="t">
+
+        <h3>Operation:</h3>
+        <select id="operation" required>
+            <option value="FtoC">Fahrenheit to Celsius
+            </option>
+            <option value="CtoF">Celsius to Farenheit</option>
+        </select>
+
+        <button onclick="convert()">Convert</button>
+        <h3><p id="result"></p></h3>
+    </div>
+</body>
+</html>

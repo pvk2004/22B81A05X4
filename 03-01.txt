@@ -1,0 +1,64 @@
+//var keyword
+variable()//function hoisting
+function variable(){
+var a = 10;
+console.log(a);
+var b = 20;//variable redeclaration
+console.log(b);
+for(var i=0;i<10;i++){}
+console.log(i);//i is accesable after for loop
+var a = 10;
+if(true){
+    var b = 20;
+    console.log(b);
+}
+console.log(b);//accessible throughout the function scope
+a = 20;
+console.log(a)//var allows declaration hoisting
+var a;
+}
+
+
+//let keyword
+function letKeyword(){
+    let a = 10;
+    console.log(a);
+    //let a;//error let cannot be re-declared
+    //console.log(a);
+    a = 20;
+    console.log(a);//can be re-initialised
+    for(let i=0;i<10;i++){}
+    //console.log(i);//let is not accesible outside the block
+    //let i;//error let cannot be re-declared
+    // i =10;
+    // console.log(i);
+    // let i;//hoisting is not allowed
+}
+letKeyword();
+
+
+//const keyword
+function constKeyword(){
+    const a = "Hello World!";
+    console.log(a);
+    // a = "Heroo";//error const variables cannot be reassigned
+    // console.log(a);
+    const obj = {
+        name : "Charan",
+        age : 20,
+        potential : "no potential"
+    }
+    // obj = {
+    //     name : "Anirudh",
+    //     age : 20,
+    //     potential : "GOAT"
+    // }error const variables cannot be reassigned
+    //object properites can be changes
+    obj.name = "Anirudh";
+    obj.age = 20;
+    obj.potential = "GOAT";
+    console.log(obj);
+    // carname = "BMW";
+    // const carname;//Hoisting is not allowed
+}
+constKeyword()
