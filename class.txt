@@ -1,0 +1,24 @@
+class Person{
+    
+    constructor(name,id){
+        this.name=name;
+        this.id=id;
+    }
+    display(){
+        console.log(`name=----${this.name} and id----->${this.id}`)
+    }
+}
+class Male extends Person{
+    constructor(name,id,gender){
+        super(name,id)
+        this.gender=gender;
+
+    }
+    display(){
+        console.log(`in Male........name=----${this.name} and id----->${this.id} and gender---->${this.gender}`)
+    }
+}
+const p=new Person('shashi',101)
+p.display()
+const s=new Male('prany',45,'M')
+s.display()
