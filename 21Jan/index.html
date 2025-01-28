@@ -8,10 +8,19 @@
     <!-- <script src="calc.js"></script> -->
     <!-- <script src="delay.js"></script> -->
     <!-- <script src="fetchData.js"></script> -->
-    <script src="chainProms.js"></script>
+    <!-- <script src="chainProms.js"></script> -->
     <!-- <script src="greet.js"></script> -->
+     <!-- <script src="fetchData.js"></script> -->
+    <!-- <script src="fetchDataPromise.js"></script> -->
+     <script src="weather.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
+    <h3>Enter city name:</h3>
+    <input type="text" id="City">
+    <button onclick={fetchWeather()}>search</button>
+    <h2 id="msg"></h2>
+    <canvas id="myChart" style="width:100%; max-width:700px;"></canvas>
     
 </body>
 </html>
