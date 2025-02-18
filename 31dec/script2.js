@@ -24,6 +24,9 @@ var person = {
         if(this.age >= 18)
             return "Adult"
         else return "Minor"
+    },
+    sayHello: function(){
+        console.log("Hello");
     }
 }
 
